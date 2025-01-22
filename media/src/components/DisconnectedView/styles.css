@@ -1,0 +1,53 @@
+.disconnected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    margin: 0 auto;
+    border-radius: 8px;
+    height: 100%;
+    color: var(--vscode-editor-foreground, #e0e0e0);
+}
+  
+.disconnected h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.disconnected p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--vscode-editor-foreground, #cfcfcf);
+}
+
+span.connect-spotify {
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
+    margin: 5px 0;
+    background-color: #1DB954;
+    color: #fff;
+    cursor: pointer;
+}
+
+span.connect-spotify:hover {
+    background-color: #1aa34a;
+}
+
+span.connect-spotify:active {
+    background-color: #178c3d;
+    transform: scale(-2px);
+}
+
+span.connect-spotify:focus {
+    outline: none;
+}

@@ -1,0 +1,103 @@
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5% 20px 40px 20px;
+    border-radius: 1rem;
+    padding: 10px;
+    background: linear-gradient(
+        to bottom right,
+        rgba(var(--bg-color-r), var(--bg-color-g), var(--bg-color-b), 0.1),
+        rgb(var(--bg-color-r), var(--bg-color-g), var(--bg-color-b))
+    );
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+    max-width: 400px;
+    flex-shrink: 0;
+}
+
+.player:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    align-items: center;
+    width: 70%;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e7e7e7;
+    text-align: center;
+    margin: 0;
+}
+
+
+.artist {
+    font-size: 0.9rem;
+    color: #c1c1c1;
+    text-align: center;
+    margin: 0;
+}
+
+.long-text {
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.elipsis-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+img {
+    border-radius: 8px;
+    height: 125px;
+    width: 125px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.playback-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.playback-buttons:hover {
+    background-color: #444;
+    transform: scale(1.1);
+}
+
+.playback-buttons:active {
+    transform: scale(1.05);
+}
+
+@media (min-width: 400px) {
+    .player {
+        justify-content: flex-start;
+    }
+}

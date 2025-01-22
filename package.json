@@ -1,0 +1,106 @@
+{
+  "name": "spotify-api-vscode",
+  "displayName": "spotify-api-vscode",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "category": "Spoticode",
+        "command": "spotify-api-vscode.connect",
+        "title": "Connect Spotify Account"
+      },
+      {
+        "category": "Spoticode",
+        "command": "spotify-api-vscode.playpause",
+        "title": "Play/Pause"
+      },
+      {
+        "category": "Spoticode",
+        "command": "spotify-api-vscode.next",
+        "title": "Next Track"
+      },
+      {
+        "category": "Spoticode",
+        "command": "spotify-api-vscode.previous",
+        "title": "Previous Track"
+      },
+      {
+        "category": "Spoticode",
+        "command": "spotify-api-vscode.focus",
+        "title": "Reveal Side Panel"
+      },
+      {
+        "category": "Spoticode",
+        "command": "spotify-api-vscode.disconnect",
+        "title": "Disconnect Spotify Account"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Spoticode",
+      "properties": {
+        "spotifyControl.clientId": {
+          "type": "string",
+          "default": "",
+          "description": "Spotify App Client ID"
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "spotify-api-vscode",
+          "title": "Spoticode",
+          "icon": "assets/panel_icon.png"
+        }
+      ]
+    },
+    "views": {
+      "spotify-api-vscode": [
+        {
+          "type": "webview",
+          "id": "spotify-api-vscode.sidePanelView",
+          "name": "Spoticode",
+          "icon": "assets/panel_icon.png"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.8",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^8.7.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.11.1",
+    "source-map-loader": "^5.0.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "dotenv": "^16.4.5",
+    "spotify-api-vscode": "file:"
+  }
+}
