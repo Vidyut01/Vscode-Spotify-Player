@@ -1,6 +1,6 @@
-# spotify-api-vscode
+# Spoticode: VSCode Spotify Controller
 
-## Build and Run in dev environment
+## Build and Install
 
 ### Build frontend
 
@@ -25,7 +25,23 @@ In the root directory
 npm install
 ```
 
+### Run in Dev Environment
+
 Then open the command palette (`ctrl+shift+p`) and run `Debug: Start Debugging`
+
+### Production Build and Installation
+
+To build a production `.vsix` package.
+
+```bash
+vsce package
+```
+
+And install to vscode by running
+
+```bash
+code --install-extension spoticode-extension-0.0.1.vsix # Repalce with actual `.vsix` file name
+```
 
 ## Using the Extension
 

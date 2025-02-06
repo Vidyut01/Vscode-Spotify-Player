@@ -1,6 +1,6 @@
 {
   "name": "spoticode-extension",
-  "displayName": "Spoticode: VSCode Spotify COntroller",
+  "displayName": "Spoticode: VSCode Spotify Controller",
   "description": "Control your current spotify session directly from your editor.",
   "publisher": "vidyutv",
   "version": "0.0.1",
