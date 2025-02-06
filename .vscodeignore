@@ -9,3 +9,5 @@ vsc-extension-quickstart.md
 **/*.map
 **/*.ts
 **/.vscode-test.*
+media/node_modules/
+node_modules/spotify-api-vscode

@@ -102,5 +102,9 @@
     "axios": "^1.7.7",
     "dotenv": "^16.4.5",
     "spotify-api-vscode": "file:"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vidyut01/spotify-api-vscode"
   }
 }

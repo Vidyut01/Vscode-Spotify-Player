@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { SpotifyPlaylist, SpotifyTrack } from '../../interfaces/SpotifyResponse.interface'
 import { getPlaylistTracks, playSongPlaylist } from '../../messages';
-import Scrollbars from 'react-custom-scrollbars-2';
 import { HiArrowLeft } from 'react-icons/hi2';
 import { FaPlay } from 'react-icons/fa';
 import PlaylistSong from '../Song/PlaylistSong';

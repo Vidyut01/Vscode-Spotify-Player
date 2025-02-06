@@ -171,6 +171,9 @@ export const getPlaylistTracks = async (
         const res = await axios.get(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
             headers: {
                 Authorization: `Bearer ${access_token}`
+            },
+            params: {
+                limit: 50
             }
         });
 

@@ -27,7 +27,6 @@ const Playlists = () => {
         console.log(playlists);
     }, [playlists]);
 
-    // TODO: Scroll not scrolling fully for some reason
     return (
         <div className='playlists'>
             {playlists.length ?

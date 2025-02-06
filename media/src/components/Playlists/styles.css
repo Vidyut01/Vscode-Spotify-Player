@@ -2,7 +2,6 @@
     padding-left: 5%;
     padding-right: 5%;
     height: 100%;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
@@ -117,6 +116,7 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 5%;
+    margin-top: 10px;
 }
 
 .play-button {
