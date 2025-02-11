@@ -172,16 +172,37 @@ export const prevSong = async (context: vscode.ExtensionContext, isRetry: boolea
     }
 
     try {
-        await axios.post(
-            `https://api.spotify.com/v1/me/player/previous`,
-            {},
-            {
-                headers: {
-                    Authorization: `Bearer ${access_token}`,
-                    'Content-Type': 'application/json',
-                }
+        const res = await axios.get(`https://api.spotify.com/v1/me/player`, {
+            headers: {
+                Authorization: `Bearer ${access_token}`
             }
-        );
+        });
+        
+        const { progress_ms } = res.data;
+
+        if (progress_ms > 3000) {
+            await axios.put(
+                `https://api.spotify.com/v1/me/player/seek?position_ms=0`,
+                {},
+                {
+                    headers: {
+                        Authorization: `Bearer ${access_token}`
+                    }
+                }
+            );
+        }
+        else {
+            await axios.post(
+                `https://api.spotify.com/v1/me/player/previous`,
+                {},
+                {
+                    headers: {
+                        Authorization: `Bearer ${access_token}`,
+                        'Content-Type': 'application/json',
+                    }
+                }
+            );
+        }
     }
     catch (err) {
         if (axios.isAxiosError(err)) {
