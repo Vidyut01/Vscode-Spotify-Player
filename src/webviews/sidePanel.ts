@@ -93,7 +93,7 @@ export class SidePanelView implements vscode.WebviewViewProvider {
                 content="default-src 'none'; 
                 script-src 'nonce-${nonce}' ${webview.cspSource}; 
                 style-src ${webview.cspSource}; 
-                img-src ${webview.cspSource} blob: data: https://i.scdn.co https://mosaic.scdn.co https://p.scdn.co https://new.scdn.co https://lexicon-assets.spotifycdn.com https://wrapped-images.spotifycdn.com;">
+                img-src ${webview.cspSource} blob: data: https://*.scdn.co https://*.spotifycdn.com;">
             <title>Spoticode Panel</title>
             <link nonce="${nonce}" rel="stylesheet" href="${styleUri}">
         </head>
