@@ -38,6 +38,16 @@
       },
       {
         "category": "Spoticode",
+        "command": "spotify-api-vscode.toggleshuffle",
+        "title": "Toggle Shuffle"
+      },
+      {
+        "category": "Spoticode",
+        "command": "spotify-api-vscode.setrepeat",
+        "title": "Toggle Repeat"
+      },
+      {
+        "category": "Spoticode",
         "command": "spotify-api-vscode.focus",
         "title": "Reveal Side Panel"
       },

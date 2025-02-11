@@ -4,7 +4,7 @@ import axios from "axios";
 import crypto from 'crypto';
 
 const redirect_uri = 'http://localhost:43897/callback';
-const scope = 'user-read-playback-state user-modify-playback-state user-library-read playlist-read-private';
+const scope = 'user-read-playback-state user-modify-playback-state user-library-read playlist-read-private user-read-currently-playing';
 
 export const initAuth = async (context: vscode.ExtensionContext) => {
     const client_id = vscode.workspace.getConfiguration('spotifyControl').get<string>('clientId');

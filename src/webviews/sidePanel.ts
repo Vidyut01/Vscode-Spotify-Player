@@ -46,6 +46,12 @@ export class SidePanelView implements vscode.WebviewViewProvider {
                 case 'prev':
                     vscode.commands.executeCommand('spotify-api-vscode.previous');
                     break;
+                case 'shuffle':
+                    vscode.commands.executeCommand('spotify-api-vscode.toggleshuffle');
+                    break;
+                case 'repeat':
+                    vscode.commands.executeCommand('spotify-api-vscode.setrepeat');
+                    break;
                 case 'search':
                     vscode.commands.executeCommand('spotify-api-vscode.search', message.searchTerm);
                     break;

@@ -33,14 +33,14 @@ export const displayCurrentSongDetails = async (
     const refreshDisplay = async () => {
         try {
             const res = await axios.get(
-                `https://api.spotify.com/v1/me/player/currently-playing`,
+                `https://api.spotify.com/v1/me/player`,
                 {
                     headers: {
                         Authorization: `Bearer ${access_token}`,
                     },
                 }
             );
-            
+
             if (res.status === 200 && res.data) {
                 const name = res.data.item.name;
                 const artist = res.data.item.artists.map((artist: any) => artist.name).join(', ');
@@ -51,14 +51,16 @@ export const displayCurrentSongDetails = async (
                 statusBar[1].tooltip = res.data.is_playing ? 'Pause Track' : 'Play Track';
 
                 statusBar.forEach(e => e.show());
-
+                
                 const message = {
                     command: 'current_playing',
                     title: name,
                     artist,
                     image_url: res.data?.item?.album?.images[0].url,
                     id: res.data.item.id,
-                    is_playing: res.data.is_playing
+                    is_playing: res.data.is_playing,
+                    repeat: res.data.repeat_state,
+                    shuffle: res.data.shuffle_state,
                 };
 
                 // Send message to frontend

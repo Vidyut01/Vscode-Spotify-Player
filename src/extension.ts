@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import { startServer } from './authenticate/server';
 import { disconnect, initAuth, isAuthenticated } from './authenticate/auth';
-import { nextSong, playpause, playSong, playSongPlaylist, prevSong } from './commands/player';
+import { nextSong, playpause, playSong, playSongPlaylist, prevSong, toggleRepeat, toggleShuffle } from './commands/player';
 import { displayCurrentSongDetails, stopDisplay } from './commands/display';
 import { SidePanelView } from './webviews/sidePanel';
 import { getPlaylists, getPlaylistTracks, search } from './commands/search';
@@ -35,6 +35,16 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(
 		vscode.commands.registerCommand('spotify-api-vscode.previous', async () => {
 			await prevSong(context);
+	}));
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand('spotify-api-vscode.toggleshuffle', async () => {
+			await toggleShuffle(context);
+	}));
+
+	context.subscriptions.push(
+		vscode.commands.registerCommand('spotify-api-vscode.setrepeat', async () => {
+			await toggleRepeat(context);
 	}));
 
 	context.subscriptions.push(

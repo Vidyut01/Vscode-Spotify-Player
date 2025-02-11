@@ -7,6 +7,12 @@ export const sendNext = () =>
 export const sendPrev = () => 
     vscode.postMessage({ command: 'prev' });
 
+export const sendShuffle = () =>
+    vscode.postMessage({ command: 'shuffle' });
+
+export const sendRepeat = () =>
+    vscode.postMessage({ command: 'repeat' });
+
 export const search = (searchTerm: string) => 
     vscode.postMessage({ command: 'search', searchTerm });
 
