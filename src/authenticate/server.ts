@@ -21,7 +21,18 @@ export const startServer = (context: vscode.ExtensionContext) => {
             await exchangeToken(code!, context);
 
             res.writeHead(200, { 'Content-Type': 'text/html' });
-            res.end('<h1>Authentication successful! You can close this window.</h1>');
+            res.end(`
+            <html>
+            <head>
+                <title>Authentication Successful</title>
+            </head>
+            <body>
+                <p>You can close this window now</p>
+                <script>
+                    window.location.href = 'vscode://';
+                </script>
+            </body>
+            </html>`);
 
             server.close();
         }

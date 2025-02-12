@@ -45,6 +45,8 @@ code --install-extension spoticode-extension-0.0.1.vsix # Repalce with actual `.
 
 ## Using the Extension
 
+> Note: The user needs a Spotify Premium account to use most of the features
+
 ### Setting Client ID
 
 **This step is only needed the first time on a device. If Settings Sync is on, then the Client ID will be synced on any other devices**
