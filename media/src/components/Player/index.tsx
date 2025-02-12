@@ -89,6 +89,8 @@ const Player = () => {
         setImageUrl(null);
         setCurrSong?.(null);
         setIsPlaying(false);
+        setRepeat('off');
+        setIsShuffle(false);
         
         vscode.setState(null);
     }
